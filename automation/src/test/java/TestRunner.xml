@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Automation Testing">
+	<listeners>
+		<listener class-name="com.automation.qe.listener.TestListener" />
+		<listener class-name="com.automation.qe.listener.ExtentReportListener" />
+		<listener class-name="com.automation.qe.listener.JiraClientListener" />
+	</listeners>
+	<test name="Functional Testing">
+		<classes>
+			<class name="com.automation.qe.test.LoginPageTest" />
+			<class name="com.automation.qe.test.HomePageTest" />
+		</classes>
+	</test>
+</suite>
