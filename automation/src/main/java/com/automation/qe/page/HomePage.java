@@ -15,17 +15,22 @@ public class HomePage extends BasePage{
 	}
 	
 	//Page locator
-	By headerTitle = By.xpath("//div/span");
-	By username = By.cssSelector("");
+	By homeHeaderTitle = By.xpath("//div/a/span/span[@text='Veroliss']");
+	By username = By.xpath("//div/a/span/span[@text='Veroliss']");
 	By logOut = By.cssSelector("");
 	
 	//Page actions/methods
+	//public Boolean homeHeaderTitle() {
+		//return webElement.waitForElementBoolean(homeHeaderTitle, "Veroliss", 60, 2);
+	//}
+	
 	public Boolean homeHeaderTitle() {
-		return webElement.waitForElementBoolean(headerTitle, "", 60, 2);
+		webElement.getPageTitle();
+		return true;
 	}
 	
 	public Boolean getUsername() {
-		webElement.waitForElementString(username,"", 60, 2);
+		webElement.waitForElementString(username,"Veroliss", 60, 2);
 		return true;
 	}
 	

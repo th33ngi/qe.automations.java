@@ -15,9 +15,10 @@ public class LoginPage extends BasePage{
 	}
 	
 	//Page locator
-	private By username = By.id("identifierId");
-	private By password = By.name("password");
-	private By loginBtn = By.xpath("//*[@id=\"identifierNext\"]/div/button/div[2]");
+	By headerTitle = By.id("pageTitle");
+	private By username = By.id("email");
+	private By password = By.id("pass");
+	By loginBtn = By.name("login");
 	
 	public Boolean loginHeaderTitle() {
 		webElement.getPageTitle();
@@ -26,8 +27,8 @@ public class LoginPage extends BasePage{
 	
 	public HomePage doLogin(String user, String pwd) {
 		webElement.sendKeys(username, user);
-		webElement.click(loginBtn);
 		webElement.sendKeys(password, pwd);
+		webElement.click(loginBtn);
 		return new HomePage(driver);
 	}
 }

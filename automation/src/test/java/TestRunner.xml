@@ -9,7 +9,7 @@
 	<test name="Functional Testing">
 		<classes>
 			<class name="com.automation.qe.test.LoginPageTest" />
-			<class name="com.automation.qe.test.HomePageTest" />
+			<!--  <class name="com.automation.qe.test.HomePageTest" /> -->
 		</classes>
 	</test>
 </suite>
